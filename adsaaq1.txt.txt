@@ -1,0 +1,47 @@
+You are given an array of integers, and you are required to sort this array using one of the following sorting algorithms: Bubble Sort, Selection Sort, or Insertion Sort. Your task is to implement the chosen sorting algorithm and analyze its time complexity.
+1.	Implement one of the sorting algorithms mentioned above (Bubble Sort, Selection Sort, or Insertion Sort) in Python.
+2.	Apply your sorting algorithm to the given array of integers.
+3.	Provide the sorted array as the output.
+4.	Analyze the time complexity of the sorting algorithm you implemented. Explain whether it is a stable sort and how it performs on different types of input data (e.g., already sorted, reverse sorted, random data).
+5.	Compare the time complexity of your chosen sorting algorithm with at least one other sorting algorithm (e.g., Quick Sort, Merge Sort, or Python's built-in sorted function). Explain the differences and scenarios where one algorithm might be preferred over the other.
+Input:
+•	An unsorted list of integers (e.g., [5, 2, 9, 1, 5, 6]).
+Output:
+•	The sorted list of integers.
+Instructions:
+1.	Choose one of the sorting algorithms (Bubble Sort, Selection Sort, or Insertion Sort) and implement it in Python.
+2.	Apply your chosen sorting algorithm to the provided input array.
+3.	Provide the sorted array as the output.
+4.	Analyze the time complexity of the sorting algorithm and discuss its stability and performance on different input data.
+5.	Compare the time complexity of your chosen sorting algorithm with at least one other sorting algorithm, and explain when you would prefer one over the other.
+
+Step 1: Implement Insertion Sort in Python
+
+This is the implementation of the Insertion Sort algorithm. It iterates through the input list, considers one element at a time and moves it into its correct position in the sorted section of the list.
+
+Step 2: Apply the Sorting Algorithm to the Given Input
+Step 3: Output
+Sorted Array: [1, 2, 5, 5, 6, 9]
+
+Step 4: Analyze Time Complexity, Stability, and Performance
+Time Complexity: The time complexity of Insertion Sort is O(n^2) for the worst and average case scenarios. However, it performs relatively well for small input sizes or nearly sorted data due to its adaptive nature.
+
+Stability: Insertion Sort is a stable sorting algorithm. This means that it preserves the relative order of equal elements in the sorted output as they appear in the input.
+
+Performance on Different Input Data:
+
+Already Sorted Data: Insertion Sort has a best-case time complexity of O(n) when the input data is already sorted. It performs efficiently in this scenario.
+Reverse Sorted Data: Insertion Sort has the same worst-case time complexity of O(n^2) for reverse sorted data as it needs to shift elements for each comparison.
+Random Data: Insertion Sort has an average-case time complexity of O(n^2) for random data. It performs reasonably well for small datasets but becomes inefficient for large datasets.
+Step 5: Compare with Another Sorting Algorithm (Quick Sort)
+Let's compare Insertion Sort with Quick Sort:
+
+Quick Sort:
+Time Complexity: The average and best-case time complexity of Quick Sort is O(n log n). However, in the worst case, it can be O(n^2) which happens when the pivot choice is poor, leading to unbalanced partitions.
+Stability: Quick Sort is not stable by default. However, stable versions can be implemented at the cost of increased complexity.
+Performance: Quick Sort is very fast and efficient for large datasets and performs well on average and random data. Its worst-case performance is a concern for specific applications, but the average-case performance is generally superior to Insertion Sort.
+When to Use Which Algorithm:
+
+Use Insertion Sort when you have a small dataset or when the data is nearly sorted, as it performs well in these cases.
+Use Quick Sort when you are dealing with large datasets and average or random data. It's a widely used and efficient sorting algorithm for most scenarios.
+Keep in mind that Python's built-in sorted() function uses an adaptive, stable, and efficient sorting algorithm called Timsort, which is a hybrid sorting algorithm derived from merge sort and insertion sort. For most general use cases, prefer using sorted() in Python as it's highly optimized and covers a wide range of scenarios.
